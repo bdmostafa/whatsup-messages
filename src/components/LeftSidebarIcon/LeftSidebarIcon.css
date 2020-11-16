@@ -1,0 +1,16 @@
+.left__sidebarIcons {
+    display: flex;
+    flex-direction: column;
+    flex: 0.15;
+}
+
+.left__sidebarIcons .MuiSvgIcon-root {
+    font-size: 40px !important;
+    margin-bottom: 1vh;
+    padding: 7px;
+}
+
+.left__sidebarIcons .MuiSvgIcon-root:hover {
+    border-radius: 10px;
+    background-color: #f7405c;
+}
