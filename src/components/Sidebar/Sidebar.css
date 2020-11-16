@@ -42,3 +42,9 @@
     border-radius: 10px;
     background-color: #f7405c;
 }
+
+.sidebar__chatUsers {
+   flex: 1;
+   background-color: white;
+   /* overflow: scroll; */
+}

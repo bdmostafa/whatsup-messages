@@ -1,0 +1,20 @@
+.sidebarChatUsers {
+    display: flex;
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.438);
+}
+
+.sidebarChatUsers .MuiAvatar-root {
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebarChatUsers__info h4, .sidebarChatUsers__info p {
+    margin: 0;
+}
+
+.sidebarChatUsers:hover {
+    background-color: #f1f3f5;
+}
