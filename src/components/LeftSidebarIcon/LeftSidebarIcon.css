@@ -1,7 +1,7 @@
 .left__sidebarIcons {
     display: flex;
     flex-direction: column;
-    flex: 0.15;
+    flex: 0.10;
 }
 
 .left__sidebarIcons .MuiSvgIcon-root {
