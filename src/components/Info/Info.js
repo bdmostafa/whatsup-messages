@@ -13,9 +13,8 @@ const Info = () => {
                <h4>Ananya Shergill</h4>
                <h6>Co-Worker</h6>
                <p>Dhaka, Bangladesh</p>
-               <button>More Information</button>
-
            </div>
+           <button>More Information</button>
 
            <div className="info__contact">
                <div className="info__contactHeading">
@@ -44,7 +43,12 @@ const Info = () => {
                    <p>View All</p>
                </div>
                <div className="info__attachmentsGallery">
-                <img src="" />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/African-Woman-Business-Woman-Young-Woman-Black-Woman-3439224.jpg/598px-African-Woman-Business-Woman-Young-Woman-Black-Woman-3439224.jpg" />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/African-Woman-Business-Woman-Young-Woman-Black-Woman-3439224.jpg/598px-African-Woman-Business-Woman-Young-Woman-Black-Woman-3439224.jpg" />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/African-Woman-Business-Woman-Young-Woman-Black-Woman-3439224.jpg/598px-African-Woman-Business-Woman-Young-Woman-Black-Woman-3439224.jpg" />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/African-Woman-Business-Woman-Young-Woman-Black-Woman-3439224.jpg/598px-African-Woman-Business-Woman-Young-Woman-Black-Woman-3439224.jpg" />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/African-Woman-Business-Woman-Young-Woman-Black-Woman-3439224.jpg/598px-African-Woman-Business-Woman-Young-Woman-Black-Woman-3439224.jpg" />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/African-Woman-Business-Woman-Young-Woman-Black-Woman-3439224.jpg/598px-African-Woman-Business-Woman-Young-Woman-Black-Woman-3439224.jpg" />
                </div>
 
            </div>
