@@ -1,12 +1,22 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import Chat from "./components/Chat/Chat";
 import Info from "./components/Info/Info";
-import LeftSidebarIcon from "./components/LeftSidebarIcon/LeftSidebarIcon";
 import Sidebar from "./components/Sidebar/Sidebar";
+import LeftSidebarIcon from "./components/LeftSidebarIcon/LeftSidebarIcon";
 import Pusher from 'pusher-js';
+import axios from './axios';
 
 function App() {
+  const [messages, setMessages] = useState([]);
+
+  useEffect(() => {
+    fetch('http://localhost:4200/messages/sync')
+    .then(res => res.json())
+    .then(data => setMessages(data))
+  }, [])
+
+console.log(messages)
 
   useEffect(() => {
     const pusher = new Pusher("6fba44253488d9d7fcc8", {
@@ -14,10 +24,24 @@ function App() {
     });
 
     var channel = pusher.subscribe("messages");
-    channel.bind("inserted", (data) => {
-      alert(JSON.stringify(data));
+    channel.bind("inserted", (newMsg) => {
+      alert(JSON.stringify(newMsg));
+      setMessages([...messages, newMsg]);
     });
-  }, []);
+
+    // When one msg is updated/sent, execute unbind all and unsubscribe
+    // because any other users' msg should not be executed at a time
+    // ensure there is only one subscriber
+    return () => {
+      channel.unbind_all();
+      channel.unsubscribe();
+    }
+
+
+
+  }, [messages]);
+
+  console.log(messages)
 
   return (
     <div className="App">
