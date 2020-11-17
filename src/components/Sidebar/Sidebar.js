@@ -8,12 +8,37 @@ import SearchIcon from "@material-ui/icons/Search";
 import SidebarChatUsers from "../SidebarChatUsers/SidebarChatUsers";
 import SidebarChatGroups from "../SidebarChatGroups/SidebarChatGroups";
 import AddIcon from '@material-ui/icons/Add';
+import CreateGroup from "../CreateGroup/CreateGroup";
 
 const Sidebar = () => {
   const [usersTab, setUsersTab] = useState(true);
   const [groupsTab, setGroupsTab] = useState(false);
 
-  console.log(usersTab, groupsTab);
+  
+
+
+  var subtitle;
+  const [modalIsOpen,setIsOpen] = useState(false);
+
+  function openModal() {
+    setIsOpen(true);
+  }
+ 
+  function afterOpenModal() {
+    // references are now sync'd and can be accessed.
+    // subtitle.style.color = '#f00';
+  }
+ 
+  function closeModal(){
+    setIsOpen(false);
+  }
+
+
+  const handleCreateGroup = () => {
+
+
+  }
+
   return (
     <div className="sidebar">
       <h2>Messages</h2>
@@ -59,13 +84,18 @@ const Sidebar = () => {
           <SidebarChatGroups />
           <SidebarChatGroups />
           <div className="sidebar__chatGroupsBtn">
-            <button>
+            <button onClick={openModal}>
               <AddIcon />
               Create Group
             </button>
           </div>
         </div>
       )}
+      <CreateGroup 
+      modalIsOpen={modalIsOpen}
+       afterOpenModal={afterOpenModal}
+       closeModal={closeModal}
+       />
     </div>
   );
 };

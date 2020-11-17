@@ -58,13 +58,12 @@
 }
 
 .sidebar__chatGroups {
-    display: grid;
-    justify-content: center;
+    /* display: grid;
+    justify-content: center; */
 }
 
 .sidebar__chatGroupsBtn {
     display: grid;
-    margin-top: 10rem;
 }
 
 .sidebar__chatGroupsBtn button {
@@ -79,4 +78,5 @@
     color: white;
     outline-width: 0;
     height: 45px;
+    cursor: pointer;
 }

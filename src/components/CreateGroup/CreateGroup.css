@@ -1,0 +1,70 @@
+/* .groupModal {
+    border-radius: 10px;
+    padding: 20px;
+    min-width: 400px;
+} */
+
+.groupModal__area {
+    display: grid;
+    justify-content: center;
+}
+
+.groupModal__areaUsers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.groupModal__searchContainer {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 45px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+}
+
+.groupModal__searchContainer input {
+    margin: 0 auto;
+    border: none;
+    background-color: #f4f4f4;
+    padding: 5px;
+    width: 100%;
+    margin-left: 10px;
+}
+
+.groupModal__searchContainer > .MuiSvgIcon-root {
+    position: absolute;
+    top: 24%;
+    left: 85%;
+    color: gray;
+}
+
+.groupModal__areaUsers h4 {
+    margin-left: 10px;
+}
+
+.groupModal__areaUsers button {
+    border: 1px solid #f7405c;
+    border-radius: 5px;
+    padding: 4px;
+    margin-left: 5rem;
+    width: 60px;
+}
+
+.groupModal__createBtn {
+    margin-top: 20px;
+    background-color: #f7405c;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    color: white;
+    outline-width: 0;
+    height: 45px;
+    cursor: pointer;
+}
