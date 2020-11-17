@@ -50,7 +50,8 @@ const Sidebar = () => {
         <IconButton>
           <div onClick={openModal} className="btn">
             <SupervisorAccountIcon />
-            <Modal
+          </div>
+          <Modal
           isOpen={modalIsOpen}
           onRequestClose={closeModal}
           style={customStyles}
@@ -58,7 +59,6 @@ const Sidebar = () => {
         >
           <div className="model">
             <h2 className="text-center">Create a Group</h2>
-            <button onClick={closeModal}>close</button>
             <form>
               <input className="form-control" placeholder="Search for people" />
             </form>
@@ -68,7 +68,6 @@ const Sidebar = () => {
             <ChatUser></ChatUser>
           </div>
         </Modal>
-          </div>
         </IconButton>
         <IconButton>
           <SettingsIcon />
