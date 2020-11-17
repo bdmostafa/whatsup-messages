@@ -52,7 +52,7 @@ const Chat = () => {
           <div style={{ display: "inline-grid" }}>
             <p className="chat__msg">
               <span className="chat__name">Mostafa</span>
-              This is messages
+              This is message
             </p>
             <p className="chat__timestamp">{new Date().toUTCString()}</p>
           </div>
