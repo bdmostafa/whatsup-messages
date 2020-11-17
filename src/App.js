@@ -1,49 +1,65 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, createContext } from "react";
 import "./App.css";
-import Chats from "./components/Chat/Chats";
-import Info from "./components/Info/Info";
-import Sidebar from "./components/Sidebar/Sidebar";
-import LeftSidebarIcon from "./components/LeftSidebarIcon/LeftSidebarIcon";
-import Pusher from 'pusher-js';
+
 import axios from './axios';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import Home from "./components/Home/Home";
+import Login from "./components/Login/Login";
+import PrivateRoute from "./components/Login/PrivateRoute";
+import NoMatch from "./components/NoMatch/NoMatch";
+import SignIn from "./components/Login/SignIn";
+
+export const UserContext = createContext();
 
 function App() {
-  const [messages, setMessages] = useState([]);
+  const [loggedInUser, setLoggedInUser] = useState({});
 
-  useEffect(() => {
-    fetch('http://localhost:4200/messages/sync')
-    .then(res => res.json())
-    .then(data => setMessages(data))
-  }, [])
-
-  useEffect(() => {
-    const pusher = new Pusher("6fba44253488d9d7fcc8", {
-      cluster: "ap1",
-    });
-
-    var channel = pusher.subscribe("messages");
-    channel.bind("inserted", (newMsg) => {
-      // alert(JSON.stringify(newMsg));
-      setMessages([...messages, newMsg]);
-    });
-
-    // When one msg is updated/sent, execute unbind all and unsubscribe
-    // because any other users' msg should not be executed at a time
-    // ensure there is only one subscriber
-    return () => {
-      channel.unbind_all();
-      channel.unsubscribe();
-    }
-
-  }, [messages]);
+  
 
   return (
     <div className="App">
       <div className="app__body">
-        <LeftSidebarIcon />
-        <Sidebar />
-        <Chats messages={messages} />
-        <Info />
+
+      <UserContext.Provider value={{
+      loggedInUser,
+      setLoggedInUser
+    }}>
+      <Router>
+        <Switch>
+          {/* <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/home">
+            <Home />
+          </Route> */}
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route path="/signIn">
+            <SignIn />
+          </Route>
+          <PrivateRoute path="/">
+            <Home />
+          </PrivateRoute>
+          <PrivateRoute path="/home">
+            <Home />
+          </PrivateRoute>
+          <Route path="*">
+            <NoMatch />
+          </Route>
+        </Switch>
+      </Router>
+    </UserContext.Provider>
+
+
+
+
+       
       </div>
     </div>
   );

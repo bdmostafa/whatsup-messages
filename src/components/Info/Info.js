@@ -5,12 +5,12 @@ import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import CallIcon from '@material-ui/icons/Call';
 import PermIdentityIcon from '@material-ui/icons/PermIdentity';
 
-const Info = () => {
+const Info = ({ loggedInUser: { name, email, photoURL } }) => {
     return (
         <div className="info">
            <div className="info__header">
-               <Avatar />
-               <h4>Ananya Shergill</h4>
+               <Avatar src={photoURL} />
+               <h4>{name}</h4>
                <h6>Co-Worker</h6>
                <p>Dhaka, Bangladesh</p>
            </div>
@@ -24,7 +24,7 @@ const Info = () => {
                <ul>
                    <li>
                     <MailOutlineIcon />
-                    annanya.shergill@gms.com
+                    {email}
                    </li>
                    <li>
                        <CallIcon />

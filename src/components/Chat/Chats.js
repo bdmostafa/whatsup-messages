@@ -8,7 +8,9 @@ import SendRoundedIcon from "@material-ui/icons/SendRounded";
 import AttachFileRoundedIcon from "@material-ui/icons/AttachFileRounded";
 import Chat from "./Chat";
 
-const Chats = ({ messages }) => {
+
+const Chats = ({ messages, loggedInUser }) => {
+  
   const [inputVal, setInputVal] = useState("");
 
   const sendMsg =  (e) => {
@@ -31,15 +33,15 @@ const Chats = ({ messages }) => {
     setInputVal("");
 
   };
-
+console.log(loggedInUser)
   return (
     <div className="chat">
       <div className="chat__header">
-        <Avatar />
+        <Avatar src={loggedInUser && loggedInUser.photoURL} />
 
         <div className="chat__headerInfo">
-          <h4>Annayna Segtill</h4>
-          <p>Online | Last seen at...</p>
+          <h4>{loggedInUser.name}</h4>
+          <p>Online</p>
         </div>
         <div className="chat__headerRight">
           <IconButton>
@@ -50,7 +52,7 @@ const Chats = ({ messages }) => {
 
       <div className="chat__body">
         {messages.map((msg, idx) => (
-          <Chat key={idx} message={msg} />
+          <Chat key={idx} message={msg} name={loggedInUser.name} image={loggedInUser.photoURL} />
         ))}
       </div>
 

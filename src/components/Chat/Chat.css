@@ -48,7 +48,6 @@
   position: relative;
   font-size: 16px;
   padding: 10px;
-  width: fit-content;
   border-radius: 10px;
   background-color: #f1f3f5;
   margin-bottom: 25px;
@@ -68,7 +67,7 @@
 }
 
 .chat__body .chat__reciever {
-    margin-left: auto !important;
+    margin-left: 50% !important;
 }
 
 .chat__reciever .chat__msg {
