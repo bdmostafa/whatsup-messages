@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
-import Chat from "./components/Chat/Chat";
+import Chats from "./components/Chat/Chats";
 import Info from "./components/Info/Info";
 import Sidebar from "./components/Sidebar/Sidebar";
 import LeftSidebarIcon from "./components/LeftSidebarIcon/LeftSidebarIcon";
@@ -16,8 +16,6 @@ function App() {
     .then(data => setMessages(data))
   }, [])
 
-console.log(messages)
-
   useEffect(() => {
     const pusher = new Pusher("6fba44253488d9d7fcc8", {
       cluster: "ap1",
@@ -25,7 +23,7 @@ console.log(messages)
 
     var channel = pusher.subscribe("messages");
     channel.bind("inserted", (newMsg) => {
-      alert(JSON.stringify(newMsg));
+      // alert(JSON.stringify(newMsg));
       setMessages([...messages, newMsg]);
     });
 
@@ -37,18 +35,14 @@ console.log(messages)
       channel.unsubscribe();
     }
 
-
-
   }, [messages]);
-
-  console.log(messages)
 
   return (
     <div className="App">
       <div className="app__body">
         <LeftSidebarIcon />
         <Sidebar />
-        <Chat />
+        <Chats messages={messages} />
         <Info />
       </div>
     </div>
