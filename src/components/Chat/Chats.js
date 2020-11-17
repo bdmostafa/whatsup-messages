@@ -11,10 +11,10 @@ import Chat from "./Chat";
 const Chats = ({ messages }) => {
   const [inputVal, setInputVal] = useState("");
 
-  const sendMsg = async (e) => {
+  const sendMsg =  (e) => {
     e.preventDefault();
 
-    await fetch("http://localhost:4200/messages/new", {
+     fetch("http://localhost:4200/messages/new", {
       method: "POST",
       headers: {
         Accept: "application/json",

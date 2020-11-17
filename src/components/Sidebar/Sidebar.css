@@ -46,8 +46,37 @@
     background-color: #f7405c;
 }
 
-.sidebar__chatUsers {
+.active {
+    border-radius: 10px;
+    background-color: #f7405c;
+}
+
+.sidebar__chatUsers, .sidebar__chatGroups {
    flex: 1;
    background-color: white;
    /* overflow: scroll; */
+}
+
+.sidebar__chatGroups {
+    display: grid;
+    justify-content: center;
+}
+
+.sidebar__chatGroupsBtn {
+    display: grid;
+    margin-top: 10rem;
+}
+
+.sidebar__chatGroupsBtn button {
+    background-color: #f7405c;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    color: white;
+    outline-width: 0;
+    height: 45px;
 }

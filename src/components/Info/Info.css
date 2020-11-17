@@ -1,7 +1,7 @@
 .info {
     display: flex;
     flex-direction: column;
-    flex: 0.25;
+    flex: 0.20;
     margin: 50px 25px 50px 0px;
     box-shadow: 0px 0px 25px 0px rgba(128, 128, 128, 0.466);
     padding: 20px;
