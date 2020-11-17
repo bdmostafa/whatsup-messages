@@ -1,0 +1,77 @@
+.info {
+    display: flex;
+    flex-direction: column;
+    flex: 0.25;
+    margin: 50px 25px 50px 0px;
+    box-shadow: 0px 0px 25px 0px rgba(128, 128, 128, 0.466);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.info__header {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.info__header .MuiAvatar-root {
+    margin: 0 auto;
+}
+
+.info__header h4, .info__header h6, .info__header p {
+    margin: 0 0 5px 0;
+}
+
+.info button {
+    background-color: #f1f3f5;
+    border: none;
+    height: 45px;
+    font-size: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.info__contactHeading {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+}
+
+.info__contactHeading h2, .info__attachmentsHeading h2 {
+    font-size: 16px;
+}
+
+.info__contactHeading p, .info__attachmentsHeading p {
+    font-size: 14px;
+    color: cornflowerblue;
+}
+
+.info__contact ul {
+    list-style: none;
+    display: grid;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+.info__contact ul li {
+    display: flex;
+    margin-left: -40px;
+    margin-bottom: 20px;
+}
+
+.info__contact ul li > .MuiSvgIcon-root {
+    margin-right: 5px;
+}
+
+.info__attachmentsHeading {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+}
+
+.info__attachmentsGallery img {
+    width: 29%;
+    margin: 5px;
+    border-radius: 5px;
+}

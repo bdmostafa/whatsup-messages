@@ -1,0 +1,32 @@
+.loginPart{
+    margin-top: 200px;
+}
+.box-text{
+  padding-top: 50px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    width: 450px;
+    height: 290px;
+    box-shadow: 5px 5px 20px;
+}
+#input{
+    width: 350px;
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid gray;
+}
+.Btn{
+    width: 350px;
+    height: 40px;
+    background-color: red;
+    color: white!important; ;
+    border: none;
+}
+.loginPart button{
+    border-radius: 15px;
+   width: 400px;
+   height: 40px;
+   border:1px solid rgb(238, 57, 57);
+   background-color: white;
+ 
+ }

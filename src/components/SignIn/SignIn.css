@@ -1,0 +1,18 @@
+.signInPart{
+    margin-top: 200px;
+}
+.box{
+  padding-top: 20px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    width: 450px;
+    height: 290px;
+    box-shadow: 5px 5px 20px;
+    
+}
+#input{
+    width: 350px;
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid gray;
+}
