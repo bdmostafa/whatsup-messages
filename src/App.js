@@ -31,12 +31,6 @@ function App() {
     }}>
       <Router>
         <Switch>
-          {/* <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/home">
-            <Home />
-          </Route> */}
           <Route path="/login">
             <Login />
           </Route>

@@ -11,11 +11,9 @@ import AddIcon from '@material-ui/icons/Add';
 import CreateGroup from "../CreateGroup/CreateGroup";
 
 const Sidebar = () => {
+
   const [usersTab, setUsersTab] = useState(true);
   const [groupsTab, setGroupsTab] = useState(false);
-
-  
-
 
   var subtitle;
   const [modalIsOpen,setIsOpen] = useState(false);
@@ -31,12 +29,6 @@ const Sidebar = () => {
  
   function closeModal(){
     setIsOpen(false);
-  }
-
-
-  const handleCreateGroup = () => {
-
-
   }
 
   return (

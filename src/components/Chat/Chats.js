@@ -16,7 +16,7 @@ const Chats = ({ messages, loggedInUser }) => {
   const sendMsg =  (e) => {
     e.preventDefault();
 
-     fetch("http://localhost:4200/messages/new", {
+     fetch("https://whatsup-server.herokuapp.com/messages/new", {
       method: "POST",
       headers: {
         Accept: "application/json",

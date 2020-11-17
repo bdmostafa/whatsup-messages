@@ -11,7 +11,7 @@ const Home = () => {
   const [messages, setMessages] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:4200/messages/sync")
+    fetch("https://whatsup-server.herokuapp.com/messages/sync")
       .then((res) => res.json())
       .then((data) => setMessages(data));
   }, []);
