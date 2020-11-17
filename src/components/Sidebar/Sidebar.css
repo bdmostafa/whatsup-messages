@@ -16,7 +16,22 @@
     height: 30px;
     padding: 10px;
 }
-
+.ReactModal__Content.ReactModal__Content--after-open {
+    width: 500px;
+    height: 500px;
+    overflow: hidden;
+}
+.text-center{
+    text-align: center;
+}
+.model{
+    padding: 20px 20px;
+}
+input.form-control {
+    padding: 10px;
+    width: 90%;
+    margin: 10px 10px;
+}
 .sidebar__searchContainer {
     display: flex;
     align-items: center;
